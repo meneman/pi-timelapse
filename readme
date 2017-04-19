@@ -1,0 +1,6 @@
+screen - oopen new terminal
+sudo python3 timelapse.py
+screen -ls
+[strg + A] + D 
+screen -r
+ 
