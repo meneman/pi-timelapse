@@ -3,10 +3,16 @@ from os import system
 from time import sleep
 import subprocess
 import dropbox
+import json
 import os, shutil
 
-#dbx = dropbox.Dropbox('3542wvbpli8AAAAAAAAYYbreqkbJFL2yV33yOz39FmSSQbAq_ywp6xVtOvjVtWal')
-dbc = dropbox.client.DropboxClient('3542wvbpli8AAAAAAAAYYbreqkbJFL2yV33yOz39FmSSQbAq_ywp6xVtOvjVtWal')
+f = open("timelapse.json", "r")
+config = json.loads(f.read())
+f.close()
+
+
+
+dbc = dropbox.client.DropboxClient(config["accessKey"])
 
 while True:
 	for i in range(3):
@@ -21,5 +27,4 @@ while True:
 
 
 		os.remove(picturePath)
-		print("The Picture was removed localy")        
-    
+		print("The Picture was removed localy")

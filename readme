@@ -1,6 +1,9 @@
-screen - oopen new terminal
+needs fswebcam, ImageMagick, Python3, Python3-dropbox to run
+
+screen - open new terminal
 sudo python3 timelapse.py
 screen -ls
-[strg + A] + D 
+[strg + A] + D
 screen -r
- 
+
+sudo apt-get install imagemagick
