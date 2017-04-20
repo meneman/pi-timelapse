@@ -8,3 +8,5 @@ gifCreator.py
 test.py
 timelapse.json
 pics/*
+test.txt
+!/pics/readme
