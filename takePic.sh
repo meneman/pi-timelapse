@@ -3,7 +3,7 @@
 
 DATE=$(date +"%Y-%m-%d_%H%M")
 
-fswebcam -r 1920x1080 -s 2
-fswebcam -r 1920x1080 -S 100 --no-banner /home/pi/pics/$DATE.jpg
-convert $DATE.jpg -resize '1024x1024' -quality 80% -gamma 1.10,1.05,1.0 $DATE.jpg
+fswebcam -r 1280x1024 -s 2
+fswebcam -r 1280x1024 --fps 15 -S 30 --no-banner ./pics/$DATE.jpg
+convert ./pics/$DATE.jpg -quality 80% -gamma 1.10,1.05,1.0 ./pics/$DATE.jpg
 echo $DATE
